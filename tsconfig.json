@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "target": "ES2021",
+        "sourceMap": true,
+        "strict": true,
+        "noImplicitOverride": true
+    },
+    "include": ["./scripts/**/*.ts"],
+    "exclude": [
+        "node_modules",
+        ".history",
+        "/dist"
+    ]
+}
