@@ -65,7 +65,8 @@ module.exports = (args, options) => {
     ].filter(Boolean),
     devtool: 'inline-source-map',
     devServer: {
-      injectClient: false,
+      client: false,
+      hot: false,
     },
   };
 };
