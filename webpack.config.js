@@ -4,6 +4,7 @@ const path = require("path");
 const { BannerPlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { createIndexContent } = require('./index-content');
+const url = require('url')
 
 const SCRIPTS_FOLDER = './scripts'
 const scriptNamesList = readdirSync(path.resolve(SCRIPTS_FOLDER), {withFileTypes: true})
@@ -48,6 +49,7 @@ module.exports = (args, options) => {
       new WebpackUserscript({
         proxyScript: {
           enable: true,
+          baseUrl: url.pathToFileURL(path.resolve('dist')).href,
         },
         headers: data => {
           const headersFile = path.resolve(SCRIPTS_FOLDER, data.basename, 'headers.json');
@@ -67,6 +69,9 @@ module.exports = (args, options) => {
     devServer: {
       client: false,
       hot: false,
+      devMiddleware: {
+        writeToDisk: true,
+      }
     },
   };
 };

@@ -11,7 +11,7 @@
   "author": "Alexandr Plokhih",
   "license": "ISC",
   "dependencies": {
-    "@plohoj/html-editor": "0.0.5",
+    "@plohoj/html-editor": "^0.0.6",
     "rxjs": "^7.4.0"
   },
   "devDependencies": {

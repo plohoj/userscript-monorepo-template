@@ -18,3 +18,5 @@ Example of headers.json content:
     ```
 ## Building
 To build the entire list of scripts, use the `npm run build:prod` or `npm build:dev` command, depending on your need.
+
+To instantly download the new version of the script, you need to give permission "Allow access to file URLs" on the page "Extension details"
